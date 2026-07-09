@@ -7,14 +7,8 @@ const CaseStudy = ({
   videoSrc = '',
   videoPoster = '',
 }) => {
-  console.log('videoSrc:', videoSrc);
   return (
     <section className="case-study">
-      <div className="case-study__text">
-        <h1 className="case-study__heading">{heading}</h1>
-        <p className="case-study__subheading">{subheading}</p>
-      </div>
-
       <div className="case-study__video-wrapper">
         <video
           className="case-study__video"
@@ -26,6 +20,11 @@ const CaseStudy = ({
         >
           <source src={videoSrc} type="video/mp4" />
         </video>
+
+        <div className="case-study__text">
+          <h1 className="case-study__heading">{heading}</h1>
+          <p className="case-study__subheading">{subheading}</p>
+        </div>
       </div>
     </section>
   );
